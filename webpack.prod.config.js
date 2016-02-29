@@ -18,7 +18,6 @@ _.assign(config, {
     new HtmlPlugin({
       pkg: require('./package.json'),
       template: './src/index.html',
-      inject: 'body',
     }),
   ],
 });
