@@ -8,7 +8,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8000',
     'webpack/hot/dev-server',
-    './index.jsx',
+    './src/index.jsx',
   ],
   devServer: {
     info: false,
@@ -34,7 +34,7 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'react-hot!babel?presets[]=react,presets[]=es2015',
+      loader: 'react-hot!babel?presets[]=react,presets[]=es2015,presets[]=stage-2',
     }, {
       test: /\.json/,
       loader: 'json',
@@ -76,7 +76,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlPlugin({
       pkg: require('./package.json'),
-      template: './index.html',
+      template: './src/index.html',
       inject: 'body',
     }),
   ],

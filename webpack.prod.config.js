@@ -5,7 +5,7 @@ const _ = require('lodash');
 
 _.assign(config, {
   entry: [
-    './src/components/index.jsx',
+    './src/index.jsx',
   ],
   plugins: [
     new webpack.ProvidePlugin({
@@ -17,7 +17,7 @@ _.assign(config, {
     }),
     new HtmlPlugin({
       pkg: require('./package.json'),
-      template: './index.html',
+      template: './src/index.html',
       inject: 'body',
     }),
   ],
